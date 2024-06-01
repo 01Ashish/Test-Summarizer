@@ -11,7 +11,7 @@ def index():
 @app.route("/Text_Summarizer",methods=['GET','POST'])
 def Text_Summarizer():
     if req.method == "POST":
-        headers = {"Authorization": f"Bearer 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"}
+        headers = {"Authorization": f"Bearer {Token}"}
         API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
 
         data = req.form["data"]
